@@ -290,11 +290,11 @@ Dans Docker SWARM, un réseau de type overlay n'est visible sur un noeud worker 
 
 - Exécutez la commande `docker service ps web` pour lister les conteneurs du service web : Notez que le noeud où se situe le conteneur est affiché.
 
-- Accédez à l'application de votre service via l'URL http://localhost:9090 (qui redirige vers {ip-manager}:8080)
+- Accédez à l'application de votre service via l'URL http://localhost:8090 (qui redirige vers {ip-manager}:8080)
 
-- Accédez-y maintenant via l'URL http://localhost:9091 (qui redirige vers {ip-worker-1}:8080)
+- Accédez-y maintenant via l'URL http://localhost:8091 (qui redirige vers {ip-worker-1}:8080)
 
-- Enfin, accédez-y via l'URL http://localhost:9092 (qui redirige vers {ip-worker-2}:8080)
+- Enfin, accédez-y via l'URL http://localhost:8092 (qui redirige vers {ip-worker-2}:8080)
 
 Confirmez que l'accès à l'application via nimporte quel noeud fonctionne, bien que le conteneur soit hébergé dans seulement l'un d'entre eux. En effet, lorsque le port-binding est configuré, Docker SWARM utilise le réseau par défaut nommé **ingress** pour load-balancer le traffic sur l'ensemble des noeuds du cluster.
 
